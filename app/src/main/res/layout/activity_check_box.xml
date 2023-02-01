@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="fill|fill_horizontal|top|center_vertical|fill_vertical"
+    android:orientation="vertical"
+    tools:context=".CheckBoxActivity">
+
+    <CheckBox
+        android:id="@+id/checkbox_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="60dp"
+        android:text="Pizza" />
+
+    <CheckBox
+        android:id="@+id/checkboxtwo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="60dp"
+        android:text="Burger" />
+
+    <CheckBox
+        android:id="@+id/checkboxthree_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="60dp"
+        android:text="Coffe" />
+
+    <Button
+        android:id="@+id/order_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="20dp"
+        android:text="Order" />
+</LinearLayout>
