@@ -11,6 +11,7 @@ public class DatepickerActivity extends AppCompatActivity {
     DatePicker dateDp;
     TextView currentDateTxt;
     Button changeTheDateBtn;
+    TextView yearTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,12 @@ public class DatepickerActivity extends AppCompatActivity {
         dateDp = findViewById(R.id.date_dp);
         currentDateTxt = findViewById(R.id.currentdate_txt);
         changeTheDateBtn = findViewById(R.id.changethedate_btn);
+        yearTxt = findViewById(R.id.year_txt);
+
         showCurrentDate();
         handleChangeDateBtn();
+
+
     }
     private void showCurrentDate() {
         String selectedDate = getSelectedDate();
@@ -31,6 +36,8 @@ public class DatepickerActivity extends AppCompatActivity {
         changeTheDateBtn.setOnClickListener(v -> {
             String selectedDate = getSelectedDate();
             currentDateTxt.setText("Changed Date: " + selectedDate);
+            String selectedYear = checkLeapYear(dateDp.getYear());
+            yearTxt.setText(selectedYear);
         });
     }
 
@@ -44,6 +51,13 @@ public class DatepickerActivity extends AppCompatActivity {
 
     public String createDate(int date, int month, int year) {
         return date + "/" + month + "/" + year;
+    }
+    public String checkLeapYear(int year){
+        if (year % 4==0){
+            return  year + "is a leap year";
+        }else{
+            return  year + "is not leap year";
+        }
     }
 }
 
